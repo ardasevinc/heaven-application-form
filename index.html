@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
+  <title>Apply to Heaven</title>
+</head>
+<body>
+  <div class="wrapper">
+
+  <header>
+    <h1>Apply to Heaven</h1>
+    <span>The best simulated universe cluster known to humankind</span>
+  </header>
+
+  <main>
+    <form method="post">
+
+      <section>
+        <h2>Personal Information</h2>
+        <p>
+          <label for="name">
+            <span>Name: </span>
+            <input type="text" id="name" name="applicant_name" required>
+          </label>
+        </p>
+        <p>
+          <label for="email">
+            <span>Email: </span>
+            <input type="email" id="email" name="applicant_email" required >
+          </label>
+        </p>
+        <p>
+          <label for="age">
+            <span>Age: </span>
+            <input type="number" id="age" name="applicant_age" min=0 max=201>
+          </label>
+        </p>
+        <p>
+          <label for="job">
+            <span>Occupation: </span>
+            <input type="text" id="job" name="applicant_job">
+          </label>
+        </p>
+      </section>
+
+      <section>
+        <h2>Realm Information</h2>
+        <p>
+          <label for="realm">
+            <span>Realm Selection: </span>
+          </label>
+          <select id="realm" name="realm_name" required>
+            <option value="karan" selected>Karan</option>
+            <option value="divine_leaf">Divine Leaf Realm</option>
+            <optgroup label="Anime Realms">
+              <option value="dragon_ball">Dragon Ball</option>
+              <option value="naruto">Naruto</option>
+              <option value="konosuba">Konosuba</option>
+          </select>
+        </p>
+        <fieldset>
+          <legend>Role</legend>
+          <ul>
+            <li>
+              <label for="mc">
+                <input type="radio" id="mc" name="applicant_role" required>
+                MC (Main Character)
+              </label>
+            </li>
+            <li>
+              <label for="pc">
+                <input type="radio" id="pc" name="applicant_role" selected required>
+                PC (Player Character)
+              </label>
+            </li>
+            <li>
+              <label for="relmc">
+                <input type="radio" id="relmc" name="applicant_role" required>
+                Related to MC
+              </label>
+            </li>
+            <li>
+              <label for="npc">
+                <input type="radio" id="npc" name="applicant_role" required>
+                NPC (Non-Player Character)
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </section>
+
+      <section>
+        <fieldset>
+          <legend>Tell Us More</legend>
+          <textarea id="reason" name="applicant_reason" rows=5 cols=33>
+            Write here
+          </textarea>
+        </fieldset>
+      </section>
+      <section>
+        <p><button type="submit">APPLY</button></p>
+      </section>
+    </form>
+  </main>
+  <footer>
+    <p>
+      <a class="sign" href="https://ardasevinc.me">Arda Sevinç</a>
+    </p>
+    <p>
+      <a class="source" href="https://github.com/ardasevinc/go-to-heaven">view the source on github</a>
+    </p>
+  </footer>
+  </div>
+</body>
+</html>
