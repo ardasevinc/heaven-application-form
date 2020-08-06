@@ -5,53 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet"> 
   <title>Apply to Heaven</title>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="wrap">
 
   <header>
     <h1>Apply to Heaven</h1>
-    <span>The best simulated universe cluster known to humankind</span>
+    <em><span>The best simulated universe cluster known to humankind</span></em>
   </header>
 
   <main>
     <form method="post">
 
-      <section>
+      <section class="personal-info">
         <h2>Personal Information</h2>
-        <p>
-          <label for="name">
-            <span>Name: </span>
-            <input type="text" id="name" name="applicant_name" required>
-          </label>
-        </p>
-        <p>
-          <label for="email">
-            <span>Email: </span>
-            <input type="email" id="email" name="applicant_email" required >
-          </label>
-        </p>
-        <p>
-          <label for="age">
-            <span>Age: </span>
-            <input type="number" id="age" name="applicant_age" min=0 max=201>
-          </label>
-        </p>
-        <p>
-          <label for="job">
-            <span>Occupation: </span>
-            <input type="text" id="job" name="applicant_job">
-          </label>
-        </p>
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="applicant_name" 
+            placeholder="John Smith" required>
+          </li>
+
+          <li>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="applicant_email" 
+            placeholder="john@smith.com" required>
+          </li>
+
+          <li>
+            <label for="age">Age</label>
+              <input type="number" id="age" name="applicant_age" 
+              placeholder="age" min=0 max=201>
+          </li>
+
+          <li>
+            <label for="job">Occupation</label>
+              <input type="text" id="job" name="applicant_job" 
+              placeholder="fire hydrant">
+          </li>
+        </ul>
       </section>
 
-      <section>
+      <section class="realm-info">
         <h2>Realm Information</h2>
         <p>
           <label for="realm">
-            <span>Realm Selection: </span>
+            <span>Realm Selection</span>
           </label>
           <select id="realm" name="realm_name" required>
             <option value="karan" selected>Karan</option>
@@ -93,11 +94,10 @@
         </fieldset>
       </section>
 
-      <section>
+      <section class="textbox">
         <fieldset>
           <legend>Tell Us More</legend>
           <textarea id="reason" name="applicant_reason" rows=5 cols=33>
-            Write here
           </textarea>
         </fieldset>
       </section>
@@ -106,14 +106,12 @@
       </section>
     </form>
   </main>
+
   <footer>
-    <p>
-      <a class="sign" href="https://ardasevinc.me">Arda Sevinç</a>
-    </p>
-    <p>
-      <a class="source" href="https://github.com/ardasevinc/go-to-heaven">view the source on github</a>
-    </p>
+    <a class="sign" href="https://ardasevinc.me">Arda Sevinç</a>
+    <a class="source" href="https://github.com/ardasevinc/go-to-heaven">view the source on github</a>
   </footer>
+
   </div>
 </body>
 </html>
