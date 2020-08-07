@@ -39,7 +39,7 @@ body {
 }
 
 .wrap {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -76,13 +76,16 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  outline: 1px solid red;
   text-align: center;
+  margin: 5% 0;
 }
 
 form {
-  border: 1px solid red;
-  flex-shrink: 3;
+  border: 0;
+  border-left: 5px solid  var(--dark-blue);
+  border-right: 5px solid var(--dark-blue);
+  border-radius: 20%;
+  padding: 5%;
 }
 
 .personal-info {
@@ -97,12 +100,52 @@ input[type=text], input[type=email], input[type=number], select {
   width: 80%;
 }
 
+input, textarea, select {
+  background-color: hsla(33, 50%, 20%, 0.6);
+  /* background-color: hsla(235, 57%, 20%, 0.1); */
+  /* border: 2.5px solid var(--dark-brown); */
+  padding: 2%;
+}
+
+input {
+  border: 0;
+  border-bottom: 3.5px solid hsla(235, 57%, 20%, 0.6);
+}
+
+select {
+  border: 0;
+  border-bottom: 3.5px solid hsla(235, 57%, 20%, 0.6);
+}
+
+textarea {
+  border: 0;
+}
+
+input:hover, select:hover, textarea:hover {
+  outline: none;
+  border: 3.5px solid hsla(235, 57%, 20%, 0.6);
+}
+
+input:active, select:active, textarea:active {
+  outline: none;
+  border: 3.5px solid hsla(235, 57%, 20%, 0.6);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border: 3.5px solid hsla(235, 57%, 20%, 0.6);
+}
+
+input::placeholder, select {
+  color: #f4e1cb;
+}
+
 .realm-info p {
   /* margin-bottom: 8%; */
 }
 
 .realm-info ul {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 
@@ -129,6 +172,7 @@ form label {
 
 .textbox {
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 .textbox legend {
@@ -136,6 +180,20 @@ form label {
   font-size: 1.65rem;
   font-family: 'Roboto Slab', serif;
 }
+
+button {
+  padding: 5%;
+  width: 35%;
+  color: white;
+  background-color: var(--dark-brown);
+  border-radius: 10%;
+  outline: none;
+}
+
+button:hover, button:active, button:focus {
+  border: 2px solid white;
+}
+
 
 footer {
   min-height: 10%;
@@ -153,6 +211,7 @@ footer {
   font-weight: 400;
   font-size: 2rem;
   align-self: center;
+  margin-bottom: 4%;
 }
 
 .source {
